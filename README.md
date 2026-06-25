@@ -41,9 +41,9 @@ What the other computer needs:
 
 | Needed? | What | Notes |
 |---|---|---|
-| ✅ Included | **Python** | Bundled in the `python/` subfolder — don't delete it. No install required. |
-| ✅ Built into Windows | **A web browser** | Microsoft Edge ships with Windows 10/11. (Chrome is used if present.) |
-| ⚠️ Separate | **CRG Scoreboard, running** | The data source. Must be running on that computer or another on the same network — SmashDisplay only displays it. |
+|  Included | **Python** | Bundled in the `python/` subfolder — don't delete it. No install required. |
+|  Built into Windows | **A web browser** | Microsoft Edge ships with Windows 10/11. (Chrome is used if present.) |
+|  Separate | **CRG Scoreboard, running** | The data source. Must be running on that computer or another on the same network — SmashDisplay only displays it. |
 
 You do **not** need Node.js, npm, or the SmashTracker app.
 
