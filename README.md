@@ -117,8 +117,9 @@ The launchers cover normal use, but every setting also has a URL-param override 
 ```
 index.html?host=192.168.1.50      # point at a specific CRG machine
 index.html?layout=grid            # force grid layout
-index.html?demo=1                 # demo mode
+index.html?demo=1                 # demo mode (15 skaters per team)
 index.html?demo=1&n=8             # demo with 8 skaters per team
+index.html?demo=1&n=20            # demo the 20-skater edge case
 index.html?demo=1&fo=1            # demo, force a foul-out on each team
 ```
 

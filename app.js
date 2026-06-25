@@ -527,9 +527,11 @@
       { n: '911', name: 'Emergency' },
     ];
 
-    // Allow ?demo=1&n=8 to trim each roster — handy for previewing layouts
+    // Demo shows 15 skaters/team by default (the typical roster size). Rosters
+    // hold 20 so the edge case is still previewable with ?n=20; any ?n=N trims.
+    const DEMO_DEFAULT = 15;
     const demoN = parseInt(params.get('n'), 10);
-    const trim = (arr) => Number.isFinite(demoN) && demoN > 0 ? arr.slice(0, demoN) : arr;
+    const trim = (arr) => arr.slice(0, Number.isFinite(demoN) && demoN > 0 ? demoN : DEMO_DEFAULT);
 
     const forceFo = params.get('fo') === '1';
     const DEMO_CODES = ['B', 'C', 'A', 'L', 'E', 'F', 'M', 'P', 'N', 'X'];
