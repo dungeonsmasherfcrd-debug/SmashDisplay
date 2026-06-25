@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SmashDisplay — Penalties</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header id="header">
+    <div class="ctx" id="ctx">PERIOD &mdash; · JAM &mdash;</div>
+    <div class="title">SMASHDISPLAY &middot; PENALTIES</div>
+    <div class="header-right">
+      <div class="status" id="status" data-state="connecting">connecting&hellip;</div>
+      <button class="gear" id="gear" type="button" title="Settings (S)" aria-label="Settings">&#9881;</button>
+    </div>
+  </header>
+
+  <main id="board">
+    <section class="team" data-team="1">
+      <div class="team-header">
+        <span class="team-name" id="team1-name">Team 1</span>
+      </div>
+      <div class="skater-grid" id="team1-grid"></div>
+    </section>
+
+    <section class="team" data-team="2">
+      <div class="team-header">
+        <span class="team-name" id="team2-name">Team 2</span>
+      </div>
+      <div class="skater-grid" id="team2-grid"></div>
+    </section>
+  </main>
+
+  <footer id="footer">
+    <span class="hint"><kbd>F</kbd> fullscreen &middot; <kbd>N</kbd> names &middot; <kbd>+</kbd>/<kbd>-</kbd> size &middot; <kbd>S</kbd> settings</span>
+  </footer>
+
+  <!-- Settings panel — persists to localStorage, no URL params needed -->
+  <div class="settings-overlay" id="settings-overlay" hidden>
+    <div class="settings-panel" role="dialog" aria-modal="true" aria-labelledby="settings-title">
+      <h2 id="settings-title">SmashDisplay Settings</h2>
+
+      <label class="field">
+        <span>CRG host</span>
+        <input type="text" id="set-host" placeholder="localhost" autocomplete="off" spellcheck="false">
+        <small>IP or hostname of the machine running CRG Scoreboard.</small>
+      </label>
+
+      <label class="field">
+        <span>CRG port</span>
+        <input type="text" id="set-port" placeholder="8000" inputmode="numeric" autocomplete="off">
+      </label>
+
+      <label class="field">
+        <span>Layout</span>
+        <select id="set-layout">
+          <option value="blocks">Blocks (one row per skater)</option>
+          <option value="grid">Grid (one card per skater)</option>
+        </select>
+      </label>
+
+      <label class="field field-inline">
+        <input type="checkbox" id="set-names">
+        <span>Show skater names</span>
+      </label>
+
+      <label class="field field-inline">
+        <input type="checkbox" id="set-codes">
+        <span>Show penalty codes <small>(blocks layout)</small></span>
+      </label>
+
+      <label class="field">
+        <span>Number size</span>
+        <input type="range" id="set-scale" min="0.5" max="2" step="0.1" value="1">
+        <small><span id="set-scale-val">1.0</span>&times;</small>
+      </label>
+
+      <label class="field">
+        <span>Name size</span>
+        <input type="range" id="set-name-scale" min="0.5" max="2" step="0.1" value="1">
+        <small><span id="set-name-scale-val">1.0</span>&times; &mdash; long names still shrink to fit</small>
+      </label>
+
+      <div class="settings-actions">
+        <button type="button" id="set-demo" class="btn-ghost">Try demo mode</button>
+        <div class="spacer"></div>
+        <button type="button" id="set-cancel" class="btn-ghost">Cancel</button>
+        <button type="button" id="set-save" class="btn-primary">Save &amp; reconnect</button>
+      </div>
+
+      <p class="settings-note">Settings are saved on this computer. CRG Scoreboard must be running and reachable for live data.</p>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+# Normalize text line endings, but keep Windows launchers as CRLF.
+* text=auto
+*.cmd text eol=crlf
+*.bat text eol=crlf
+
+# Treat the bundled Python runtime as binary (never line-ending-convert it).
+*.dll binary
+*.exe binary
+*.pyd binary
+*.zip binary
+*.cat binary
+*.pyc binary
