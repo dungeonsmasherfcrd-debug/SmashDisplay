@@ -13,7 +13,7 @@ if not defined PY ( where py >nul 2>nul && set "PY=py" )
 if not defined PY ( where python >nul 2>nul && set "PY=python" )
 
 if defined PY (
-  start "SmashDisplay server" /min "%PY%" -m http.server %PORT% --bind 127.0.0.1 --directory "%DIR%."
+  start "SmashDisplay server" /min "%PY%" "%DIR%serve.py" %PORT% "%DIR%."
   >nul ping -n 2 127.0.0.1
 ) else (
   set "URL=file:///%DIR%index.html?demo=1"

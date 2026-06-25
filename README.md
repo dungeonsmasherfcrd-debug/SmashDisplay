@@ -130,6 +130,7 @@ index.html?demo=1&fo=1            # demo, force a foul-out on each team
 - `app.js` — WS client, path router, render loop, settings, demo mode
 - `Start SmashDisplay.cmd` — one-click launcher (live); serves over `http://127.0.0.1:8077`
 - `Start SmashDisplay (Demo).bat` — one-click launcher (demo)
+- `serve.py` — tiny static server the launchers run (adds no-cache headers so updates always load)
 - `python/` — bundled Python runtime used by the launchers (keep with the folder; no install needed)
 
 ## Connection status

@@ -20,7 +20,7 @@ if defined PY (
   rem Tiny static server bound to loopback, serving this folder. If the port is
   rem already in use from a previous launch, this window just exits and the
   rem browser connects to the server that is already running.
-  start "SmashDisplay server" /min "%PY%" -m http.server %PORT% --bind 127.0.0.1 --directory "%DIR%."
+  start "SmashDisplay server" /min "%PY%" "%DIR%serve.py" %PORT% "%DIR%."
   rem Give the server a moment to come up before opening the browser.
   >nul ping -n 2 127.0.0.1
 ) else (
