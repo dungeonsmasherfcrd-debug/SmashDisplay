@@ -1,8 +1,8 @@
 # SmashDisplay
 
-A stand-alone, projector-friendly **penalty-count display** for the [CRG Scoreboard](https://github.com/rollerderby/scoreboard). It shows every skater's roster number and current penalty count for both teams in a high-contrast, big-type layout designed to be readable across a derby track.
+A stand-alone, projector-friendly penalty-count display for the [CRG Scoreboard](https://github.com/rollerderby/scoreboard). It shows every skater's roster number and current penalty count for both teams in a high-contrast, big-type layout designed to be readable across a derby track.
 
-SmashDisplay is **read-only** — it subscribes to CRG's data and never writes anything back. It needs CRG Scoreboard running somewhere reachable on the network, but it is otherwise self-contained: no install and no build step — it ships with everything it needs, including a small bundled web server.
+SmashDisplay is read-only, it subscribes to CRG's data and never writes anything back. It needs CRG Scoreboard running somewhere reachable on the network, but it is otherwise self-contained: no install and no build step — it ships with everything it needs, including a small bundled web server.
 
 **Platform:** the one-click launchers are Windows `.cmd`/`.bat` files (Windows 10/11). The app itself is plain HTML/CSS/JS, so on macOS/Linux you can serve `index.html` with any static web server and open it in a browser.
 
@@ -12,7 +12,7 @@ SmashDisplay is **read-only** — it subscribes to CRG's data and never writes a
 
 On first run, the Settings panel pops up so you can point it at CRG. After that it remembers your settings and goes straight to the live board.
 
-> **Keep the minimized "SmashDisplay server" window open** while you use the board — closing it stops the local server. The server runs from the **bundled `python/` folder**, so nothing needs to be installed. (If that folder is missing it uses a system Python; if there's no Python at all it opens the file directly, which only works when CRG is on this same PC.)
+> **Keep the minimized "SmashDisplay server" window open** while you use the board closing it stops the local server. The server runs from the bundled `python/` folder, so nothing needs to be installed. (If that folder is missing it uses a system Python; if there's no Python at all it opens the file directly, which only works when CRG is on this same PC.)
 
 ### CRG on another computer (same network)
 
