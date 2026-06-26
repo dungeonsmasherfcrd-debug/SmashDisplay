@@ -4,6 +4,8 @@ A stand-alone, projector-friendly penalty-count display for the [CRG Scoreboard]
 
 SmashDisplay is read-only, it subscribes to CRG's data and never writes anything back. It needs CRG Scoreboard running somewhere reachable on the network, but it is otherwise self-contained: no install and no build step — it ships with everything it needs, including a small bundled web server.
 
+Designed by Fox Cities Roller Derby officials Dungeon Smasher, Red, and Havok.
+
 **Platform:** the one-click launchers are Windows `.cmd`/`.bat` files (Windows 10/11). The app itself is plain HTML/CSS/JS, so on macOS/Linux you can serve `index.html` with any static web server and open it in a browser.
 
 ## Run it
